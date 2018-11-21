@@ -12,10 +12,12 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+// Confirm the API is up and running:
 Route::get('/', function() {
     return response("", 200);
 });
 
-Route::post('/products', function() {
-    return response("Successful POST to /products", 200);
-});
+// Register routes for products
+Route::get('/products', 'ProductsController@index');
+Route::get('/products/{product}', 'ProductsController@show');
