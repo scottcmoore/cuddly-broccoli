@@ -21,3 +21,4 @@ Route::get('/', function() {
 // Register routes for products
 Route::get('/products', 'ProductsController@index');
 Route::get('/products/{product}', 'ProductsController@show');
+Route::post('/products', 'ProductsController@store');
