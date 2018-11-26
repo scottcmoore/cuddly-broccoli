@@ -1,8 +1,8 @@
-#Example API
+# Example API
 
 This is an API built as a take-home problem for a job interview, using Laravel.
 
-##Problem:
+## Problem:
 Given a CSV:
 
 - Process the data into a db table
@@ -45,13 +45,13 @@ I used Laravel, mostly because I'm interested in learning more about it, and bec
 
 ## Usage
 
-Install Laravel.
-Install MySQL.
-Create a database "products"
-Copy `.env.example` to `.env`
-Update `.env` with your DB credentials -- I just used root for development.
-Clone this repo.
-In the repo, `php artisan migrate:fresh` then `php artisan serve`
+- Install Laravel.
+- Install MySQL.
+- Create a database "products"
+- Copy `.env.example` to `.env`
+- Update `.env` with your DB credentials -- I just used root for development.
+- Clone this repo.
+- In the repo, `php artisan migrate:fresh` then `php artisan serve`
 
 Test the API with 
 ```
