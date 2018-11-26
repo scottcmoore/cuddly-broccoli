@@ -78,7 +78,7 @@ class ProductsController extends Controller
             'products.*.sku' => 'required',
             'products.*.title' => 'required',
             'products.*.description' => 'required',
-            'products.*.price' => 'required',
+            'products.*.price' => 'required|numeric',
             'products.*.availability' => 'required',
             'products.*.color' => 'required',
             'products.*.dimensions' => 'required'
