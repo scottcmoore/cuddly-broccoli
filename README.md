@@ -44,14 +44,10 @@ I used Laravel, mostly because I'm interested in learning more about it, and bec
 - Cons: brittle, doesn't have exhaustive validation, error messages are opaque
 
 ## Usage
-
-- Install Laravel.
-- Install MySQL.
-- Create a database "products"
-- Copy `.env.example` to `.env`
-- Update `.env` with your DB credentials -- I just used root for development.
-- Clone this repo.
-- In the repo, `php artisan migrate:fresh` then `php artisan serve`
+Requires Docker & docker-compose.
+- Clone this repository
+- Copy .env.example to .env: `$ cp .env.example .env`
+- docker-compose up
 
 Test the API with 
 ```

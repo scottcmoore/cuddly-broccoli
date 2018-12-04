@@ -1,0 +1,28 @@
+version: '3'
+services:
+  web:
+    build: .
+    environment:
+      - "DB_PORT=3306"
+      - "DB_HOST=mysql"
+    ports: ["8000:8000"]
+    restart: unless-stopped
+    volumes:
+      - .:/app
+  
+  mysql:
+    environment:
+      [
+        MYSQL_ALLOW_EMPTY_PASSWORD=true
+        MYSQL_DATABASE=products
+        MYSQL_ROOT_USERNAME=root
+      ]
+    image: mysql:5.7
+    ports: ["3306:3306"]
+    restart: unless-stopped
+    volumes:
+      # image will run anything in the docker-entrypoint-initdb.d folder
+      - ./initdata:/docker-entrypoint-initdb.d
+
+volumes:
+  initdata:
