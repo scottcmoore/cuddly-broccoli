@@ -85,8 +85,5 @@ These are some things I would pursue given more time:
 ### Testing
 I didn't have time to add tests. Normally I'd plan on adding at least unit tests for anything headed to production, but given the time constraints I just skipped automated testing entirely.
 
-### Docker
-I'd have liked to dockerize this application to make it more portable, but ran out of time.
-
 ### Better file validation
 Laravel supports more thorough validation of file type, and I'm sure there's other validation I could have performed on the attached CSV.
