@@ -1,6 +1,0 @@
-language: php
-
-php:
-  - 7.2
-
-script: docker build . -t phpunit_build && docker run -it phpunit_build vendor/bin/phpunit

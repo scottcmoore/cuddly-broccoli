@@ -1,5 +1,7 @@
 # Example API
 
+[![Build Status](https://travis-ci.org/scottcmoore/cuddly-broccoli.svg?branch=master)](https://travis-ci.org/scottcmoore/cuddly-broccoli)
+
 This is an API built as a take-home problem for a job interview, using Laravel.
 
 ## Problem:
@@ -24,7 +26,6 @@ Your processor must:
 
 - Create a new record if the sku does not exist in your db
 - Update the price and availability if the record does exist in your db
-
 
 ## Database choices
 I didn't spend a whole lot time thinking about the DB design. It felt like anything more than a single table would be overkill to solve the problem as stated, but in production I'd expect more demands on the DB that would probably influence design. As it is, I just created a single table using Laravel's migrations. One thing I left out due to time was a history table, which I'd normally use to track updates to items.
@@ -83,7 +84,7 @@ I tried to make use of Laravel's built-in validation, but in order to do so, I e
 These are some things I would pursue given more time:
 
 ### Testing
-I didn't have time to add tests. Normally I'd plan on adding at least unit tests for anything headed to production, but given the time constraints I just skipped automated testing entirely.
+I've recently added automated testing with Travis. Initially I've just kept Laravel's default unit tests, because I was working on getting Travis set up. Next steps will be to add meaningful unit tests.
 
 ### Better file validation
 Laravel supports more thorough validation of file type, and I'm sure there's other validation I could have performed on the attached CSV.
