@@ -6,9 +6,15 @@ RUN docker-php-ext-install pdo pdo_mysql mbstring zip
 WORKDIR /app
 ADD . /app
 
-CMD cd /app \ 
-    && composer install -o --no-interaction \
-    && php artisan key:generate \
-    && php artisan migrate:fresh \
+RUN cd /app
+RUN composer install -o --no-interaction
+RUN php artisan key:generate
+
+CMD php artisan migrate:fresh \
     && php artisan serve --host=0.0.0.0 --port=8000
-EXPOSE 8000
+
+# cd /app \ 
+#    && composer install -o --no-interaction \
+#    && php artisan key:generate \
+#    && 
+    
