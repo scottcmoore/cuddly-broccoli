@@ -10,14 +10,13 @@ services:
       - "3306:3306"
     restart: unless-stopped
     volumes:
-      # image will run anything in the docker-entrypoint-initdb.d folder
       - ./initdata:/docker-entrypoint-initdb.d
   
   web:
     build: .
     environment:
-      - "DB_PORT=3306"
       - "DB_HOST=mysql"
+      - "DB_PORT=3306"
     ports: 
       - "8000:8000"
     restart: unless-stopped
